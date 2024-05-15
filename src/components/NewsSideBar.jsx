@@ -4,7 +4,7 @@ const NewsSideBar = () => {
   const [topnews, settopnews] = useState([]);
 
   const topnewsApi = async () => {
-    const response = await fetch("https://newsapi.org/v2/top-headlines?country=id&apiKey=7ee4fa0fe3ab4357b779912a2fcc923c");
+    const response = await fetch(`https://newsapi.org/v2/top-headlines?country=us&apiKey=7ee4fa0fe3ab4357b779912a2fcc923c`);
     const data = await response.json();
     console.log(data.articles);
     settopnews(data.articles);
